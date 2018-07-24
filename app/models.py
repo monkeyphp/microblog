@@ -60,7 +60,7 @@ class User(UserMixin, db.Model):
     def followed_posts(self):
         followed = Post.query.join(
             followers, 
-            (followers.c.followed_id == Post.user.id)
+            (followers.c.followed_id == Post.user_id)
         ).filter(
             followers.c.followed_id == self.id        
         )
