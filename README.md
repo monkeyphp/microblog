@@ -12,6 +12,15 @@ $ source venv/bin/activate
 ```
 
 ```bash
+(venv) $ export FLASK_DEBUG=1
+```
+
+```bash
 (venv) $ deactivate
 ```
 
+To run the Python debugging mail server...
+
+```bash
+(venv) $ python -m smtpd -n -c DebuggingServer localhost:8025
+```
